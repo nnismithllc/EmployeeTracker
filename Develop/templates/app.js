@@ -1,6 +1,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const Employee = require("./lib/Employee");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -12,9 +13,43 @@ const render = require("./lib/htmlRenderer");
 
 
 // Write code to use inquirer to gather information about the development team members,
+
+inquirer.prompt([
+    {
+       type:"list",
+       message:"Please choose an Employee Type",
+       name:"employeeStat",
+       choices:["Employee", "Manager", "Intern", "Engineer", "Render Results"]
+   }
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+]).then(function(answers){
+    if(answers.employeeType === "Engineer") {
+        engineer();
+    }else if (answers.employeeType === "Intern") {
+        intern();
+    } else if (answers.employeeType === "Manager") {
+        manager();
+    } else if (answers.employeeType === "Employee")
+    
+    {
+        renderResults();
+    }
+})
+
+Function Employee{
+inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "What is your name?"
+    },
+
+}
 // After the user has input all employees desired, call the `render` function (required
+
+
+
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
