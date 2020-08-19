@@ -10,42 +10,98 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const Choice = require("inquirer/lib/objects/choice");
 
 
 // Write code to use inquirer to gather information about the development team members,
+const teamMembers =[];
+const idArray = [];
 
-inquirer.prompt([
-    {
-       type:"list",
-       message:"Please choose an Employee Type",
-       name:"employeeStat",
-       choices:["Employee", "Manager", "Intern", "Engineer", "Render Results"]
-   }
-// and to create objects for each team member (using the correct classes as blueprints!)
+function addTeam(){
 
-]).then(function(answers){
-    if(answers.employeeType === "Engineer") {
-        engineer();
-    }else if (answers.employeeType === "Intern") {
-        intern();
-    } else if (answers.employeeType === "Manager") {
-        manager();
-    } else if (answers.employeeType === "Employee")
-    
-    {
-        renderResults();
+function createTeam(){
+    inquirer.prompt([
+        {
+            type:"choice",
+            name: ["Manager", "Engineer", "Employee", "Intern"],
+            message: "What Type of Member do You want to add?"
+        }
+
+        
+        ]).then(uSelection =>{
+         switch(uSelection.uChoice) {
+             case "Manager":
+             addManager();
+             break;
+             case "Engineer":
+             addEngineer();
+             break;
+             case "Employee":
+             addEmployee();
+             break;
+             case "Intern":
+             addIntern();
+             break;
+             default:
+         }
+
+
+        }
+
+
+
+        )
     }
-})
 
-Function Employee{
+function createManager() {
 inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is your name?"
-    },
+{
+    type:"choice",
+    name: ["Manager", "Engineer", "Employee", "Intern"],
+    message: "What is your Employment Title?"
+}
+])
+}
+function addEngineer(){
+    inquirer.prompt([
+        {
+            type:"choice",
+            name: ["Engineer","Employee", "Intern", "Do Not Want to Add Another Member"],
+            message: "What is your Employment Title?"
+}
+])
+function addEmployee(){
+    inquirer.prompt([
+        {
+            type:"choice",
+            name: ["Employee", "Intern", "Do Not Want to Add Another Member"],
+            message: "What is your Employment Title?"
+}
+])
+function addIntern(){
+    inquirer.prompt([
+        {
+            type:"choice",
+            name: ["Intern", "Do Not Want to Add Another Member"],
+            message: "What is your Employment Title?"
+}
+])
+
+function buildTeam(){
+fs.writeFileSync(outputPath, render(teamMembers),"utf-8S")
+}
+
+createManager();{
 
 }
+
+createEngineer();{
+inquirer.prompt
+}
+
+
+addTeam();
+
 // After the user has input all employees desired, call the `render` function (required
 
 
