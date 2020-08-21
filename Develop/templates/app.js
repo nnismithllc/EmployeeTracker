@@ -94,7 +94,7 @@ inquirer.prompt([
 },
 {
     type:"Input",
-    name: "Office Number",
+    name: "Office",
     message: "What is Your Office Branch Number?"
 },
 {
