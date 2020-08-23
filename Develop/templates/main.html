@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Head Information -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,10 +12,61 @@
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 
+<!-- Css Style Information -->
+<style>
+
+/* H1 Tag */
+    h1{
+        color: rgb(24, 24, 138);
+        font-family: cursive;
+        background-color: white;
+    }
+
+/* Jumbotron Information */
+    #centered {
+    width: 150px;
+    height: 200px;
+    background-image: url("../Assets/team.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 80%;
+}
+
+/* Container Layout */
+    .container {
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    text-align: center;
+    }
+
+/* Card Information */
+    #top{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: center;
+    text-align: center;
+    color: firebrick;
+    }    
+
+    .card{
+    background-color: darkslategrey;
+    }
+
+/* Body Information */
+    body{
+    background-size: contain;
+    background-color: rgb(11, 3, 32);
+    }
+    </style>
+    
+<!-- Body Layout for HTML -->
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
+            <div class="col-sm-12 jumbotron mb-2 team-heading"id="centered">
                 <h1 class="text-center">Employee Tracker Database</h1>
             </div>
         </div>
