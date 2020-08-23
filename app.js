@@ -31,7 +31,7 @@ function appTeam() {
     {
       type: "input",
       name: "managerName",
-      message: "Please enter the Manager's first and last name.",
+      message: "Please enter the Manager's First and Last name.",
     },
     {
       type: "input",
@@ -46,7 +46,7 @@ function appTeam() {
     {
       type: "input",
       name: "officeNumber",
-      message: "What is the office phone number?",
+      message: "What is the office Phone Number?",
     },
   ])
 
@@ -99,7 +99,7 @@ function appTeam() {
     {
       type: "input",
       name: "engineerName",
-      message: "Please enter this Engineer's first and last name.",
+      message: "Please enter this Engineer's First and Last name.",
     },
     {
       type: "input",
@@ -143,13 +143,13 @@ function appTeam() {
     {
       type: "input",
       name: "internId",
-      message: "Please enter the 6 digit Intern ID number.",
+      message: "Please enter the Intern's ID number.",
     },
 
     {
       type: "input",
       name: "internEmail",
-      message: "Please enter the Intern Contact Email",
+      message: "Please enter the Intern contact email.",
     },
     {
       type: "input",
