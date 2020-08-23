@@ -145,7 +145,6 @@ function appTeam() {
       name: "internId",
       message: "Please enter the Intern's ID number.",
     },
-
     {
       type: "input",
       name: "internEmail",
