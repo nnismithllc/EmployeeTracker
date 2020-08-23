@@ -175,6 +175,7 @@ function appTeam() {
 
 // Function to Build Team on 1 Page - Output
   function buildTeam() {
+    console.log(teamMembers)
     fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
   }
 
