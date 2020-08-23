@@ -22,17 +22,22 @@ function appTeam(){
 
     function createManager (){
     inquirer.prompt([
+            { type: "list",
+              name: "managerOff",
+              message: "What is the Location Office Number?",
+              choices: [ '102938', '928374', '857463']
+        },
               {
                 type: "input",
                 name: "managerName",
                 message: "Please enter the Manager's first and last name." 
             
-              },
+        },
               { type: "input",
               name: "managerId",
               message: "Please input Manager's ID number."
 
-            },
+        },
             {
                 type: "input",
                 name: "managerEmail",
@@ -47,7 +52,7 @@ function appTeam(){
               }
          
     ]).then(answers => {
-        const manager = new Manager (answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber)
+        const manager = new Manager (answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice)
         teamMembers.push(manager);
         ids.push(answers.managerId);
         createTeam ();

@@ -4,13 +4,7 @@ constructor (name, id, email){
     this.name= name;
     this.id= id;
     this.email= email;
-   
-}
-
-
-getOfficeNumber () {
-return this.office;
-
+ 
 }
 
 getName () {
